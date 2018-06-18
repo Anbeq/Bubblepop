@@ -1,0 +1,71 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    position: relative;
+} 
+
+.input-field {
+    display: inline-block;
+    padding: 1rem  2rem 2rem 2rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 10;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+input {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#modeSwitch {
+    box-shadow: none;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 40%;
+    z-index: -5;
+    animation: pop 0.6s;
+}
+
+.disappear-after{
+    animation: pop 0.6s forwards;
+}
+
+.stay-after {
+    animation: pop-after 0.1s;
+}
+
+@keyframes pop{
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes pop-after{
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
